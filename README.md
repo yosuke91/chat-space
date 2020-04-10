@@ -31,35 +31,40 @@ Things you may want to cover:
 |group_id|integer|null: false, foreign_key: true|
 
 ###Association
-- belongs_to :groups
-- belongs_to :users
+- belongs_to :group
+- belongs_to :user
 
-## usersテーブル
+## userテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
-|user_name|string|null: false|
-|email|integer|null: false|
+|name|string|null: false|
 
 ###Association
 - has_many :groups_users
+- has_many :messages
+- has_many :groups,through: :groups_users
 
-## groupsテーブル
+## groupテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
-|group_name|string|null: false|
+|name|string|null: false|
 
 ###Association
 - has_many :groups_users
+- has_many :messages
+- has_many :users,through: :groups_users
 
-## commentsテーブル
+## messageテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false|
-
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+|body|string|null: false|
+|image|string|
 ###Association
 - belongs_to :users
+- belongs_to :group
+
