@@ -45,7 +45,7 @@ Things you may want to cover:
 ###Association
 - has_many :group_user
 
-##groupsテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -55,7 +55,7 @@ Things you may want to cover:
 ###Association
 - has_many :group_user
 
-##commentsテーブル
+## commentsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
