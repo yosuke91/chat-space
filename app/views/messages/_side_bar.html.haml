@@ -4,7 +4,7 @@
       .side-box__left
         = current_user.name
       .side-box__right
-        = link_to "#", class: "btn side-box__right__btn1"  do
+        = link_to new_group_path, class: "btn side-box__right__btn1"  do
           = icon('far', 'edit')
           %span<>
         = link_to edit_user_path(current_user), class: "btn side-box__right__btn2"  do
@@ -12,14 +12,11 @@
           %span<>
   .side-chat
     .groups
-      .group
-        .group__group-name
-          zoo 
-        .group__latest-message
-          まだメッセージがありません
-        
-      .group
-        .group__group-name
-          zoo 
-        .group__latest-message
-          まだメッセージがありません
+      - current_user.groups.each do |group|
+        .group
+          = link_to '#' do
+            .group__group-name
+              = group.name  
+            .group__latest-message
+              まだメッセージがありません。
+              
