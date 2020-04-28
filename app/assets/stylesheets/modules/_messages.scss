@@ -55,26 +55,27 @@
   color: #ffffff;
 }
 .groups{
-    height: calc(100vh - 100px);
-    background-color: #2f3e51;
-    padding: 20px 20px 0;
-    overflow: scroll;
+  height: calc(100vh - 100px);
+  background-color: #2f3e51;
+  padding: 20px 20px 0;
+  overflow: scroll;
 }
 
 .group{
   margin-bottom: 40px;
-  a {
-  text-decoration: none;
-  color: #ffffff;
+
   &__group-name{
     font-size: 15px;
     margin-bottom: 5px;
   }
-  &__group-latest-message{
+  &__latest-message{
     font-size: 11px;
 
   }
  }
+.group a {
+  text-decoration: none;
+  color: #ffffff;
 }
 .main-content{
   background-color: #ffffff;
@@ -92,12 +93,13 @@
   overflow: scroll;
   &__left-box{
     margin-top: 35px;
-    &__current-box{
+    &__current-group{
       font-size: 20px;
       color: #333;
       margin-bottom: 15px;
     }
     &__member-list{
+      padding-bottom: auto;
       display: flex;
       font-size: 12px;
       color: #999999;
