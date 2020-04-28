@@ -7,7 +7,7 @@ $(function(){
       </div>
     `;
     $("#user-search-result").append(html);
-    console.log("イベント大成功");
+    console.log(user.name)
   }
 
   function addNoUser() {
@@ -60,7 +60,7 @@ $(function(){
   });
   $(document).on("click", ".chat-group-user__btn--add", function(){
     console.log
-    const userName = $(this).attr("data-user-id");
+    const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
     $(this)
       .parent()
